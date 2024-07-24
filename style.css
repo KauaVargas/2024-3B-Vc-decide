@@ -14,5 +14,43 @@
     --Azul-fraco: #5390d9ff;
     --Azul-muito-fraco: #4ea8deff;
     --Marinho: #48bfe3ff;
+    --fonte-texto: "Playwrite DK Uloopet", cursive;
+    --fonte-titulo: "Playwrite BE WAL", cursive;
 
+}
+body{
+    background-color: var(--Roxo-forte);
+    color: var(--Marinho);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--fonte-texto)
+}
+
+.caixa-principal{
+    background-color: var(--Roxo);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo{
+    color: var(--Azul-fraco);
+    font-family: var(--fonte-titulo);
+}
+
+button{
+    background-color: var(--Azul-muito-fraco);
+    color: var(--Roxo-forte);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.3s;
+    margin: 10px auto;
+}
+
+button:hover{
+    background-color: var(--Azul-fraco);
 }
