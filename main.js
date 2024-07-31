@@ -8,42 +8,73 @@ const perguntas = [
     {
         enunciado: "Enunciado 01",
         alternativas: [
-            "alternativa 01",
-            "alternativa 02"
+            {
+                texto1: "alternativa 01",
+                afirmacao: "resultado 01"
+            },
+            {
+                texto: "alternativa 02",
+                afirmacao: "resultado 02"
+            },
         ]
     },
     {
         enunciado: "Enunciado 02",
         alternativas: [
-            "alternativa 01",
-            "alternativa 02"
+            {
+                texto: "alternativa 03",
+                afirmacao: "resultado 03"
+            },
+            {
+                texto: "alternativa 04",
+                afirmacao: "resultado 04"
+            },
         ]
     },
     {
         enunciado: "Enunciado 03",
         alternativas: [
-            "alternativa 01",
-            "alternativa 02"
+            {
+                texto: "alternativa 05",
+                afirmacao: "resultado 05"
+            },
+            {
+                texto: "alternativa 06",
+                afirmacao: "resultado 06"
+            },
         ]
     },
     {
         enunciado: "Enunciado 04",
         alternativas: [
-            "alternativa 01",
-            "alternativa 02"
+            {
+                texto: "alternativa 07",
+                afirmacao: "resultado 07"
+            },
+            {
+                texto: "alternativa 08",
+                afirmacao: "resultado 08"
+            },
         ]
     },
     {
         enunciado: "Enunciado 05",
         alternativas: [
-            "alternativa 01",
-            "alternativa 02"
+            {
+                texto: "alternativa 09",
+                afirmacao: "resultado 09"
+            },
+            {
+                texto: "alternativa 10",
+                afirmacao: "resultado 10"
+            },
         ]
     },
 ]
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostrarPerguntas(){
     perguntaAtual = perguntas[atual];
@@ -54,9 +85,11 @@ function mostrarPerguntas(){
 function mostrarAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativas;
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada{
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 
+function respostaSelecionada(opcaoSelecionada)
 mostrarPerguntas();
