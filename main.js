@@ -9,13 +9,13 @@ const perguntas = [
         enunciado: "Enunciado 01",
         alternativas: [
             {
-                texto1: "alternativa 01",
+                texto:"alternativa 01",
                 afirmacao: "resultado 01"
             },
             {
-                texto: "alternativa 02",
+                texto:"alternativa 02",
                 afirmacao: "resultado 02"
-            },
+            }   
         ]
     },
     {
@@ -23,12 +23,12 @@ const perguntas = [
         alternativas: [
             {
                 texto: "alternativa 03",
-                afirmacao: "resultado 03"
+                afirmacao: "resultado03"
             },
             {
                 texto: "alternativa 04",
                 afirmacao: "resultado 04"
-            },
+            }
         ]
     },
     {
@@ -41,7 +41,7 @@ const perguntas = [
             {
                 texto: "alternativa 06",
                 afirmacao: "resultado 06"
-            },
+            }
         ]
     },
     {
@@ -54,7 +54,7 @@ const perguntas = [
             {
                 texto: "alternativa 08",
                 afirmacao: "resultado 08"
-            },
+            }
         ]
     },
     {
@@ -67,7 +67,7 @@ const perguntas = [
             {
                 texto: "alternativa 10",
                 afirmacao: "resultado 10"
-            },
+            }
         ]
     },
 ]
@@ -77,8 +77,13 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostrarPerguntas(){
+    if(atual >= perguntas.length){
+        mostraResultado();
+        return
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = ""
     mostrarAlternativas();
 }
 
@@ -86,10 +91,22 @@ function mostrarAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada{
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa))
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 
-function respostaSelecionada(opcaoSelecionada)
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostrarPerguntas();
+}
+
+function mostraResultado(){
+    caixaPerguntas.textContent = " Inicio do texto... "
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+
 mostrarPerguntas();
