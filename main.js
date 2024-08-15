@@ -6,14 +6,14 @@ const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [
     {
-        enunciado: "Enunciado 01",
+        enunciado: "Antonio é um garoto de 5 anos que está enfrentando dificuldades em sua escola por estar sofrendo racismo devido a cor de sua pele negra, sua mãe ficou sabendo do ocorrido e foi resolver. O que ela deveria fazer?",
         alternativas: [
             {
-                texto:"alternativa 01",
-                afirmacao: "resultado 01"
+                texto:"Conversar com a diretora para solucionar o problema.",
+                afirmacao: "A mãe de Antonio foi na escola para resolver um "
             },
             {
-                texto:"alternativa 02",
+                texto:"Retirar Antonio da escola e fazer uma denuncia.",
                 afirmacao: "resultado 02"
             }   
         ]
